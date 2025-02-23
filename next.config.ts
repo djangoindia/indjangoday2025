@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   distDir: "build",
   redirects: async () => [
     {
-      source: "/(.*)",
-      destination: "/",
+      source: "/",
+      destination: "/home",
       permanent: true,
     },
   ],
