@@ -2,11 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  distDir: "build",
   redirects: async () => [
     {
-      source: "/(.*)",
-      destination: "/",
+      source: "/",
+      destination: "/home",
       permanent: true,
     },
   ],
