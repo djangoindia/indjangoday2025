@@ -21,7 +21,7 @@ const Home = () => {
           </Link>
         </div>
         <nav className="flex items-center justify-between w-full md:justify-end md:w-auto md:gap-4">
-          <a href="/story" className="text-[#14342B] text-lg">Read Story</a>
+          <Link href="/story" scroll={false} className="text-[#14342B] text-lg">Read Story</Link>
           <a 
             href={process.env.NEXT_PUBLIC_REGISTRATION_FORM_URL}
             target="_blank"
