@@ -46,7 +46,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <Image src="/sprinkle.svg" alt="App Background" fill />
         {children}
       </body>
     </html>
