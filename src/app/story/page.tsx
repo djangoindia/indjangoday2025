@@ -7,7 +7,7 @@ import { FaArrowRight, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa
 const Story = () => {
   return (
     <div className="min-h-screen bg-[#FEF6F3] flex flex-col font-sans">
-      <header className="bg-[#D5EBE1] px-6 flex justify-between items-center py-4 md:py-0">
+      <header className="bg-[#C1E0C9] px-6 flex justify-between items-center py-4 md:py-0">
         <div className="flex items-center">
           <Link href="/home">
             <Image
@@ -36,7 +36,7 @@ const Story = () => {
         <div className="flex flex-col items-start ">
         <h1 className="text-[#14342B] text-4xl sm:text-5xl md:text-6xl font-bold relative z-10">
           Complete Story
-          <span className="absolute bottom-0 left-0 w-[99%] h-1 bg-[#76BD97] z-[-1]"></span>
+          <span className="absolute bottom-0 left-0 w-[99%] h-1 bg-[#C1E0C9] z-[-1]"></span>
         </h1>
         <p className="text-[#14342B] text-lg md:text-xl w-full md:w-3/4 py-4 leading-relaxed font-bold">
           By: The Django India Team
@@ -89,7 +89,7 @@ const Story = () => {
         </div>
       </main>
 
-      <footer className="container mx-auto px-6 py-6 border-t border-[#D5EBE1]">
+      <footer className="container mx-auto px-6 py-6 border-t border-[#C1E0C9]">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-[#14342B] mb-4 md:mb-0">Organized by <a href="https://djangoindia.org" target="_blank" rel="noopener noreferrer"><u>Django India Community</u></a></p>
           <div className="flex gap-4">
@@ -97,7 +97,7 @@ const Story = () => {
               href="https://twitter.com/djangoindiaa" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#D5EBE1] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
+              className="bg-[#C1E0C9] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
             >
               <FaTwitter size={20} />
             </a>
@@ -105,7 +105,7 @@ const Story = () => {
               href="https://instagram.com/djangoindia" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#D5EBE1] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
+              className="bg-[#C1E0C9] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
             >
               <FaInstagram size={20} />
             </a>
@@ -113,7 +113,7 @@ const Story = () => {
               href="https://linkedin.com/company/djangoindia" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#D5EBE1] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
+              className="bg-[#C1E0C9] p-3 rounded-full text-[#14342B] hover:bg-[#b0d8c1] transition-all"
             >
               <FaLinkedin size={20} />
             </a>
