@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 import Script from "next/script";
 
 const archivoSans = Archivo_Black({
