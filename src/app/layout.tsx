@@ -10,8 +10,8 @@ const archivoSans = Archivo_Black({
 });
 
 export const metadata: Metadata = {
-  title: "Indjangoday 2025",
-  description: "Indian Django Day 2025",
+  title: "DjangoDay India 2025",
+  description: "DjangoDay India 2025 - A full-day conference exploring cutting-edge Django techniques, best practices, and community insights.",
 };
 
 export default function RootLayout({
