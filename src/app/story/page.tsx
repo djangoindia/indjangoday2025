@@ -27,7 +27,7 @@ const Story = () => {
             rel="noopener noreferrer"
             className="bg-[#14342B] text-white px-6 py-3 rounded-md flex items-center gap-2 transition-all hover:bg-[#0a231c]"
           >
-            Register <FaArrowRight />
+            Attend <FaArrowRight />
           </a>
         </nav>
       </header>
