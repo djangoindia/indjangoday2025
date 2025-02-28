@@ -8,9 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '10xl': '10rem',
+        '11xl': '12rem', 
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ['Thicccboi', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif'],
       },
     },
   },
