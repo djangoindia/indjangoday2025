@@ -64,7 +64,7 @@ const Home = () => {
                   <FaCalendarAlt className="text-[#14342B]" />
                 </div>
                 <span className="text-[#14342B] font-bold text-sm md:text-lg">
-                  2 Nov, 2025 (Tentative)
+                  9 Nov, 2025 (Tentative)
                 </span>
               </div>
               <div className="flex items-center gap-2">
