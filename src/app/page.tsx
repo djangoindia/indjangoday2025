@@ -42,6 +42,21 @@ const Home = () => {
         </nav>
       </header>
 
+      {/* CFP Announcement Banner */}
+      <div className="bg-[#14342B] text-white py-2 px-4 text-center">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-center items-center gap-2">
+          <span className="font-medium">🎉 CFP is now open! Submit your talk proposal now.</span>
+          <a 
+            href="https://cfp.djangoday.in/django-day-india-2025/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white text-[#14342B] px-4 py-1 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+          >
+            Submit Proposal
+          </a>
+        </div>
+      </div>
+
       <main className="flex-grow container mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
