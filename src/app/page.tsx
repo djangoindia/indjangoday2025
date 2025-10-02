@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -16,7 +17,7 @@ const Home = () => {
     <div className="min-h-screen bg-[#FEF6F3] flex flex-col font-sans">
       <header className="bg-[#C1E0C9] px-6 flex justify-between items-center py-4 md:py-0">
         <div className="flex items-center ">
-          <Link href="/home">
+          <Link href="/">
             <Image
               src="/images/django-india-logo.png"
               alt="Django India Logo"
@@ -64,7 +65,7 @@ const Home = () => {
                   <FaCalendarAlt className="text-[#14342B]" />
                 </div>
                 <span className="text-[#14342B] font-bold text-sm md:text-lg">
-                  9 Nov, 2025 (Tentative)
+                  8 Nov, 2025
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -72,7 +73,7 @@ const Home = () => {
                   <FaMapMarkerAlt className="text-[#14342B]" />
                 </div>
                 <span className="text-[#14342B] font-bold text-sm md:text-lg">
-                  Bangalore, India
+                  Scaler Institute of Technology, Bangalore, India
                 </span>
               </div>
             </div>

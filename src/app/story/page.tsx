@@ -9,7 +9,7 @@ const Story = () => {
     <div className="min-h-screen bg-[#FEF6F3] flex flex-col font-sans">
       <header className="bg-[#C1E0C9] px-6 flex justify-between items-center py-4 md:py-0">
         <div className="flex items-center">
-          <Link href="/home">
+          <Link href="/">
             <Image
               src="/images/django-india-logo.png"
               alt="Django India Logo"
@@ -20,7 +20,7 @@ const Story = () => {
           </Link>
         </div>
         <nav className="flex items-center justify-between w-full md:justify-end md:w-auto md:gap-4">
-          <Link href="/home" scroll={false} className="text-[#14342B] text-lg">Home</Link>
+          <Link href="/" scroll={false} className="text-[#14342B] text-lg">Home</Link>
           <a 
             href={process.env.NEXT_PUBLIC_REGISTRATION_FORM_URL}
             target="_blank"
