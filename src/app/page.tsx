@@ -31,14 +31,24 @@ const Home = () => {
           <Link href="/story" scroll={false} className="text-[#14342B] text-lg">
             Read Story
           </Link>
-          <a
-            href={process.env.NEXT_PUBLIC_REGISTRATION_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#14342B] text-white px-6 py-3 rounded-md flex items-center gap-2 transition-all hover:bg-[#0a231c]"
-          >
-            Attend <FaArrowRight />
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://konfhub.com/djangoday-india-2025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#14342B] text-white px-6 py-3 rounded-md flex items-center gap-2 transition-all hover:bg-[#0a231c]"
+            >
+              Buy Tickets
+            </a>
+            <a
+              href={process.env.NEXT_PUBLIC_REGISTRATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#14342B] text-white px-6 py-3 rounded-md flex items-center gap-2 transition-all hover:bg-[#0a231c]"
+            >
+              Attend <FaArrowRight />
+            </a>
+          </div>
         </nav>
       </header>
 
