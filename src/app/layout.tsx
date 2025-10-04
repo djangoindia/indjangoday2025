@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo_Black } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
@@ -10,8 +10,48 @@ const archivoSans = Archivo_Black({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://djangoday.in"),
   title: "DjangoDay India 2025",
   description: "DjangoDay India 2025 - A full-day conference exploring cutting-edge Django techniques, best practices, and community insights.",
+  keywords: ["Django", "Python", "DjangoDay", "India", "Conference", "Web Development", "2025"],
+  authors: [{ name: "Django India" }],
+  creator: "Django India",
+  publisher: "Django India",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://djangoday.in/",
+    title: "DjangoDay India 2025",
+    description: "A full-day conference exploring cutting-edge Django techniques, best practices, and community insights.",
+    siteName: "DjangoDay India 2025",
+    images: [
+      {
+        url: "/django-day.png",
+        width: 1200,
+        height: 630,
+        alt: "DjangoDay India 2025",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DjangoDay India 2025",
+    description: "A full-day conference exploring cutting-edge Django techniques, best practices, and community insights.",
+    images: ["/django-day.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -22,6 +62,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-S2C4B49K2N"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-S2C4B49K2N');
+          `}
+        </Script>
         <Script
           id="gtm-script"
           strategy="afterInteractive"
