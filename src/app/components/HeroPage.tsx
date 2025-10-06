@@ -36,7 +36,7 @@ export default function HeroPage() {
         <div className="absolute inset-0 bg-pattern opacity-30"></div>
 
         {/* Django Logo - Top Left with equal padding */}
-        <div className={`absolute top-2 left-4 sm:top-6 sm:left-8 md:left-12 lg:left-16 z-10 transition-all duration-1000 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+        {/* <div className={`absolute top-2 left-4 sm:top-6 sm:left-8 md:left-12 lg:left-16 z-10 transition-all duration-1000 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
           <div className="relative group">
             <Image
               src="/images/django-india-logo.png"
@@ -48,7 +48,7 @@ export default function HeroPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           </div>
-        </div>
+        </div> */}
 
         {/* India Map - Top Right with 0 padding */}
         <div className={`absolute top-0 right-0 z-10 transition-all duration-1000 ease-out delay-200 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
@@ -56,8 +56,8 @@ export default function HeroPage() {
             src="/images/india-map.png"
             alt="India Map"
             width={600}
-            height={1200}
-            className="object-contain w-64 sm:w-64 md:w-64 lg:w-[28rem] xl:w-[36rem] h-auto"
+            height={1000}
+            className="object-contain w-64 sm:w-64 md:w-64 lg:w-[28rem] h-auto"
           />
         </div>
 
@@ -76,23 +76,30 @@ export default function HeroPage() {
         </div>
 
         {/* Center Content: Landing Logo - Perfectly Centered */}
-        <div className={`absolute inset-0 flex flex-col items-center justify-center px-2 sm:px-4 md:px-8 z-10 transition-all duration-1000 ease-out delay-500 ${isLoaded ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
-          <div className="relative group">
-            <Image
-              src="/images/logo-landing.png"
-              alt="Django Day India 2025"
-              width={800}
-              height={112}
-              className="object-contain w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
-            <div className="absolute -inset-4 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+        <div className={`absolute inset-0 flex flex-col items-center justify-center z-10 transition-all duration-1000 ease-out delay-500 ${isLoaded ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+          <div className="relative group w-[98vw] max-w-7xl mx-auto">
+            <div className="relative w-full pb-[14%] transform scale-110"> {/* Scale up the logo */}
+              <Image
+                src="/images/django-india-logo.png"
+                alt="Django Day India 2025"
+                fill
+                sizes="(max-width: 768px) 95vw, 90vw"
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+            </div>
           </div>
 
-          <div className="w-[800px] mt-4 sm:mt-6 md:mt-8 text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl flex flex-row justify-center gap-8">
+          {/* Subtitle */}
+          <p className="mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base md:text-lg text-[#2c5530] italic font-serif transition-opacity duration-500">
+            A Journey Through Diversity, Heritage & Culture
+          </p>
+
+          <div className="w-[800px] mt-4 sm:mt-6 md:mt-8 text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl flex flex-row justify-center gap-6">
             <Button
-              size="lg"
-              className="mt-4 bg-white text-[#095148] font-semibold"
+              size="md"
+              className="bg-white text-[#095148] font-medium text-sm py-2 px-5"
               onClick={() => {
                 if (process.env.NEXT_PUBLIC_CFP_URL) {
                   window.open(process.env.NEXT_PUBLIC_CFP_URL, '_blank', 'noopener,noreferrer');
@@ -106,8 +113,8 @@ export default function HeroPage() {
             </Button>
 
             <Button
-              size="lg"
-              className="mt-4"
+              size="md"
+              className="font-medium text-sm py-2 px-5"
               onClick={() => {
                 if (process.env.NEXT_PUBLIC_TICKETS_URL) {
                   window.open(process.env.NEXT_PUBLIC_TICKETS_URL, '_blank', 'noopener,noreferrer');
@@ -129,9 +136,9 @@ export default function HeroPage() {
             <Image
               src="/images/lady.png"
               alt="Cultural Lady"
-              width={180}
-              height={450}
-              className="w-16 h-32 sm:w-24 sm:h-48 md:w-32 md:h-64 lg:w-40 lg:h-80 xl:w-48 xl:h-96 transition-transform duration-300 group-hover:scale-105"
+              width={225}
+              height={562}
+              className="w-24 h-48 sm:w-32 sm:h-64 md:w-40 md:h-80 lg:w-48 lg:h-96 xl:w-56 xl:h-[28rem] transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         </div>
@@ -323,7 +330,7 @@ export default function HeroPage() {
 
               <Button
                 size="lg"
-                className="mt-4"
+                className="mt-2 text-sm py-2 px-5"
                 onClick={() => {
                   if (process.env.  NEXT_PUBLIC_PROSPECTUS_URL) {
                     window.open(process.env.NEXT_PUBLIC_PROSPECTUS_URL, '_blank', 'noopener,noreferrer');
@@ -418,7 +425,7 @@ export default function HeroPage() {
     >
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 min-h-screen flex flex-col justify-center">
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-72">
 
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
@@ -442,14 +449,14 @@ export default function HeroPage() {
             <div className="flex justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="mt-4"
+                className="mt-2 text-sm py-2 px-5"
                 onClick={() => {
-                  if (process.env.NEXT_PUBLIC_VOLUNTEER_FORM_URL) {
-                    window.open(process.env.NEXT_PUBLIC_VOLUNTEER_FORM_URL, '_blank', 'noopener,noreferrer');
+                  if (process.env.NEXT_PUBLIC_PARTNER_FORM_URL) {
+                    window.open(process.env.NEXT_PUBLIC_PARTNER_FORM_URL, '_blank', 'noopener,noreferrer');
                   }
                 }}
               >
-                <span>Become a volunteer</span>
+                <span>Become a partner</span>
                 <span className="text-xl sm:text-2xl transition-transform duration-300 group-hover:translate-x-1">
                   <FaRegArrowAltCircleRight />
                 </span>
@@ -457,24 +464,24 @@ export default function HeroPage() {
             </div>    </div>
 
           {/* Right Content - Community Cards Grid */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-md mx-auto lg:ml-auto lg:mr-0">
-            <div className="p-4 sm:p-6 flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto lg:ml-auto lg:mr-0">
+            <div className="rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-black" style={{ backgroundColor: 'rgba(255, 255, 255, 0.47)' }}>
               <Image
                 src='/images/pydelhi_logo_horizontal_nobg.png'
                 alt='BangPypers Community'
                 width={800}
                 height={800}
-                className="object-contain"
+                className="object-contain max-h-24 sm:max-h-28"
               />
             </div>
 
-            <div className="p-4 sm:p-6 flex items-center justify-center">
+            <div className="rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-black" style={{ backgroundColor: 'rgba(255, 255, 255, 0.47)' }}>
               <Image
                 src='/images/bangpypers-square-large.png'
                 alt='PyDelhi Community'
                 width={800}
                 height={800}
-                className="object-contain"
+                className="object-contain max-h-24 sm:max-h-28"
               />
             </div>
           </div>
@@ -535,50 +542,64 @@ export default function HeroPage() {
 
         <div className="max-w-7xl bg-gradient-to-b from-transparent to-white w-[90%] sm:w-[85%] md:w-[80%] mt-8">
           {/* Section Title */}
-          <h2 className="mt-8 mb-8 text-3xl sm:text-4xl md:text-5xl font-serif  text-[#205c4b] text-left">
-            Django India Past Meetups
+          <h2 className="mt-8 mb-8 text-3xl sm:text-4xl md:text-5xl font-serif text-[#205c4b] text-left">
+            Django India Community Past Meetups
           </h2>
 
           {/* Meetups Image Grid */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Large + small stacked images */}
-            <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6 sm:gap-8">
-              <img
-                src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fc38f2af8-2fb1-423b-86f8-9a43b10.jpeg&w=1920&q=75"
-                alt="Django India Meetup 1"
-                className="rounded-xl shadow-lg object-cover w-full md:w-2/3 h-64 sm:h-80"
-              />
-              <div className="flex flex-col gap-6 sm:gap-8 w-full md:w-1/3">
+            {/* First row - large image */}
+            <div className="col-span-1 sm:col-span-2 lg:col-span-3">
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
                 <img
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fbffc4f29-d7fb-42a7-9aee-9a209abcc6c5.JPG&w=1920&q=75"
-                  alt="Django India Meetup 2"
-                  className="rounded-xl shadow-lg object-cover w-full h-32 sm:h-40"
-                />
-                <img
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2FIMG-20250118-WA0035.jpg&w=1920&q=75"
-                  alt="Django India Meetup 3"
-                  className="rounded-xl shadow-lg object-cover w-full h-32 sm:h-40"
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fc38f2af8-2fb1-423b-86f8-9a43b10.jpeg&w=1920&q=75"
+                  alt="Django India Meetup 1"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
             </div>
 
-            {/* Second row of equal images */}
-            <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row gap-6 sm:gap-8 mt-6 sm:mt-8">
-              <img
-                src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2F1U9A0141.jpeg&w=1920&q=75"
-                alt="Django India Meetup 4"
-                className="rounded-xl shadow-lg object-cover w-full sm:w-1/3 h-40 sm:h-48"
-              />
-              <img
-                src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo_first.png&w=1920&q=75"
-                alt="Django India Meetup 5"
-                className="rounded-xl shadow-lg object-cover w-full sm:w-1/3 h-40 sm:h-48"
-              />
-              <img
-                src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo.png&w=1920&q=75"
-                alt="Django India Meetup 6"
-                className="rounded-xl shadow-lg object-cover w-full sm:w-1/3 h-40 sm:h-48"
-              />
+            {/* Second row - 2 medium images */}
+            <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
+                <img
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fbffc4f29-d7fb-42a7-9aee-9a209abcc6c5.JPG&w=1920&q=75"
+                  alt="Django India Meetup 2"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
+                <img
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2FIMG-20250118-WA0035.jpg&w=1920&q=75"
+                  alt="Django India Meetup 3"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {/* Third row - 3 equal images */}
+            <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
+                <img
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2F1U9A0141.jpeg&w=1920&q=75"
+                  alt="Django India Meetup 4"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
+                <img
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo_first.png&w=1920&q=75"
+                  alt="Django India Meetup 5"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
+                <img
+                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo.png&w=1920&q=75"
+                  alt="Django India Meetup 6"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
             </div>
           </div>
 

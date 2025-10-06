@@ -3,12 +3,13 @@
 import React from 'react';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import ContactSection from './Footers';
+import Button from './Button';
 
 const SponsorsPage = () => {
     return (
         <div className="bg-[#fffbf1]">
             {/* Hero Section */}
-            <div className="bg-[#158b8b] flex flex-col justify-between overflow-hidden">
+            <div className="bg-[#158b8b] flex flex-col justify-between overflow-hidden h-[90vh]">
                 <div className="flex-1 flex flex-col md:flex-row items-center justify-center px-4 md:px-24 gap-4 md:gap-8 min-h-0 py-8 md:py-0">
                     {/* Sponsor Illustration - Now visible on mobile too */}
                     <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
@@ -33,18 +34,20 @@ const SponsorsPage = () => {
                             </p>
                         </div>
                         <div className='flex flex-row justify-start md:justify-end w-full'>
-                            <button 
-                            className="mt-4 px-6 py-3 bg-white text-[#158b8b] font-semibold rounded-full flex items-center gap-3 hover:shadow-lg transition-all group"
-                            onClick={() => {
-                            if (process.env.NEXT_PUBLIC_PROSPECTUS_URL) {
-                                window.open(process.env.NEXT_PUBLIC_PROSPECTUS_URL, '_blank', 'noopener,noreferrer');
-                            }
-                            }}>
+                            <Button
+                                size="md"
+                                className="bg-white text-[#095148] font-medium text-sm py-2 px-5"
+                                onClick={() => {
+                                if (process.env.NEXT_PUBLIC_PROSPECTUS_URL) {
+                                    window.open(process.env.NEXT_PUBLIC_PROSPECTUS_URL, '_blank', 'noopener,noreferrer');
+                                }
+                                }}
+                            >
                                 <span>Download Prospectus</span>
-                                <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">
-                                    <FaRegArrowAltCircleRight />
+                                <span className="text-xl sm:text-2xl transition-transform duration-300 group-hover:translate-x-1">
+                                <FaRegArrowAltCircleRight />
                                 </span>
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -61,8 +64,8 @@ const SponsorsPage = () => {
                 {/* Date Banner */}
                 <div className="w-full">
                     <div className="py-2 md:py-3 bg-[#4b8b8b] flex flex-col sm:flex-row justify-center sm:justify-between items-center px-6 md:px-36 text-white text-sm md:text-base lg:text-xl font-semibold gap-2 sm:gap-0">
-                        <span>Conference Day: Sunday</span>
-                        <span>Date: 2<sup>nd</sup> November, 2025</span>
+                        <span>Conference Day: Saturday</span>
+                        <span>Date: 8<sup>th</sup> November, 2025</span>
                     </div>
                 </div>
 
@@ -93,15 +96,15 @@ const SponsorsPage = () => {
 
             {/* Benefits Section - Scaled uniformly across all devices */}
 
-            <div className="w-full py-8 md:py-8 mb-16 px-4 md:px-0 flex flex-row justify-end overflow-hidden">
+            <div className="w-full py-8 md:py-16 mb-16 px-4 md:px-0 flex flex-row justify-end overflow-hidden">
 
-                <div className="bg-white  relative overflow-visible flex flex-col justify-start items-center py-4 border-[5px] border-[#a31955] rounded-[25px] h-[80%] w-full sm:w-[80%] right-[-10%] sm:right-[-10%] md:right-[-7%] lg:right-[-7%]">
+                <div className="bg-white relative overflow-visible flex flex-col justify-start items-center py-4 border-[5px] border-[#a31955] rounded-[25px] h-[80%] w-full sm:w-[80%] right-[-10%] sm:right-[-10%] md:right-[-7%] lg:right-[-7%]">
 
                     {/* Top Left Border Decor */}
                     <img
                         src="/images/border-decor.png"
                         alt="Border Decor"
-                        className="absolute  -top-16 -left-16 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 pointer-events-none select-none z-10"
+                        className="absolute -top-20 -left-20 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 pointer-events-none select-none z-10"
                         style={{ objectFit: 'contain' }}
                     />
 

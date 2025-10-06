@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
-  { label: 'About', href: '/about' },
+  { label: 'Home', href: '/' },
   // { label: 'Schedule', href: '/schedule' },
   // { label: 'Venue', href: '/venue' },
   { label: 'Sponsors', href: '/sponsors' },
@@ -42,7 +42,7 @@ export default function Navbar() {
         style={{ minWidth: 'fit-content', maxWidth: '90vw' }}
       >
         {NAV_ITEMS.map((item) => {
-          const isActive = pathname === item.href || (item.href === '/about' && pathname === '/');
+          const isActive = pathname === item.href || (item.href === '/' && pathname === '/');
           return (
             <Link href={item.href} key={item.label} legacyBehavior>
               <a
@@ -95,7 +95,7 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="absolute top-16 right-0 bg-black/95 backdrop-blur-safari rounded-2xl shadow-2xl p-4 min-w-[200px]">
             {NAV_ITEMS.map((item) => {
-              const isActive = pathname === item.href || (item.href === '/about' && pathname === '/');
+              const isActive = pathname === item.href || (item.href === '/' && pathname === '/');
               return (
                 <Link href={item.href} key={item.label} legacyBehavior>
                   <a
