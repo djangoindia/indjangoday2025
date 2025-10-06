@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Button from './Button';
 
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 
 interface SocialLink {
@@ -124,7 +125,7 @@ const ContactSection: React.FC = () => {
       <div className="text-xs sm:text-sm text-white relative bg-[#095148] w-full text-center py-3 sm:py-2 flex flex-row justify-center" style={{ zIndex: 10 }}>
         <div className="w-full sm:w-[90%] lg:w-[80%] px-4 flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center">
           <span>Copyright © 2025 DjangoDay India</span>
-          <span>Design by Akash</span>
+          <span>Designed by <Link href="https://www.linkedin.com/in/akash-chaudhary1808/" target="_blank" rel="noopener noreferrer"><u>Akash</u></Link></span>
         </div>
       </div>
     </section>

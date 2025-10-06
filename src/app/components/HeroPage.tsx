@@ -77,14 +77,14 @@ export default function HeroPage() {
 
         {/* Center Content: Landing Logo - Perfectly Centered */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center z-10 transition-all duration-1000 ease-out delay-500 ${isLoaded ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
-          <div className="relative group w-[98vw] max-w-7xl mx-auto">
-            <div className="relative w-full pb-[14%] transform scale-110"> {/* Scale up the logo */}
+          <div className="relative group w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full aspect-[4/1] max-w-6xl mx-auto">
               <Image
                 src="/images/django-india-logo.png"
                 alt="Django Day India 2025"
                 fill
-                sizes="(max-width: 768px) 95vw, 90vw"
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 80vw"
+                className="object-contain transition-transform duration-300"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
@@ -96,7 +96,7 @@ export default function HeroPage() {
             A Journey Through Diversity, Heritage & Culture
           </p>
 
-          <div className="w-[800px] mt-4 sm:mt-6 md:mt-8 text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl flex flex-row justify-center gap-6">
+          <div className="w-[800px] mt-2 sm:mt-2 md:mt-4 text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl flex flex-row justify-center gap-6">
             <Button
               size="md"
               className="bg-white text-[#095148] font-medium text-sm py-2 px-5"

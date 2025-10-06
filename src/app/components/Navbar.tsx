@@ -100,7 +100,7 @@ export default function Navbar() {
                 <Link href={item.href} key={item.label} legacyBehavior>
                   <a
                     className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-white/10 ${
-                      isActive ? 'text-yellow-400' : ''
+                      isActive ? 'text-yellow-400' : 'text-white'
                     }`}
                   >
                     <span className="text-sm font-medium">{item.label}</span>
