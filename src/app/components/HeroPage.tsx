@@ -8,8 +8,6 @@ import Navbar from './Navbar';
 import Button from './Button';
 import ScrollIndicator from './ScrollIndicator';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import KeynoteSpeakers from './KeyNote';
-import SponsorTiers from './Sponsors';
 import ContactSection from './Footers';
 
 
@@ -439,7 +437,7 @@ export default function HeroPage() {
             </div>
 
             <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed mb-6 sm:mb-8 font-medium max-w-xl mx-auto lg:mx-0">
-              Join Django India's Community Partner Program to support and
+              Join Django India&apos;s Community Partner Program to support and
               empower developers. As a partner, you contribute to growth,
               learning, and collaboration, helping the Django community
               thrive across India.
@@ -509,9 +507,11 @@ export default function HeroPage() {
           </div>
           {/* Mandala image - overlaps and sits on top of India text */}
           <div className="relative flex justify-center w-full" style={{ zIndex: 2, marginTop: 'clamp(-60px, -10vw, -120px)' }}>
-            <img
+            <Image
               src="/images/section4-mandala-bottom.png"
               alt="Mandala Bottom Decoration"
+              width={768}
+              height={400}
               className="w-64 sm:w-80 md:w-96 lg:w-[48rem] h-auto object-contain"
               style={{ position: 'relative', zIndex: 2 }}
             />
@@ -551,10 +551,11 @@ export default function HeroPage() {
             {/* First row - large image */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-3">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fc38f2af8-2fb1-423b-86f8-9a43b10.jpeg&w=1920&q=75"
                   alt="Django India Meetup 1"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
             </div>
@@ -562,17 +563,19 @@ export default function HeroPage() {
             {/* Second row - 2 medium images */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fbffc4f29-d7fb-42a7-9aee-9a209abcc6c5.JPG&w=1920&q=75"
                   alt="Django India Meetup 2"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2FIMG-20250118-WA0035.jpg&w=1920&q=75"
                   alt="Django India Meetup 3"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
             </div>
@@ -580,24 +583,27 @@ export default function HeroPage() {
             {/* Third row - 3 equal images */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2F1U9A0141.jpeg&w=1920&q=75"
                   alt="Django India Meetup 4"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo_first.png&w=1920&q=75"
                   alt="Django India Meetup 5"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
-                <img
+                <Image
                   src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo.png&w=1920&q=75"
                   alt="Django India Meetup 6"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 />
               </div>
             </div>

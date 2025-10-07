@@ -1,6 +1,7 @@
-"use client"; 
+"use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import ContactSection from './Footers';
 import Button from './Button';
@@ -14,9 +15,11 @@ const SponsorsPage = () => {
                     {/* Sponsor Illustration - Now visible on mobile too */}
                     <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
                         <div className="flex items-center">
-                            <img
+                            <Image
                                 src="/images/sponsor-illustration.png"
                                 alt="Sponsors Illustration"
+                                width={600}
+                                height={600}
                                 className="w-[250px] md:w-[400px] lg:w-[600px] object-contain"
                             />
                         </div>
@@ -83,10 +86,10 @@ const SponsorsPage = () => {
             <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-24">
                 <div className="max-w-3xl">
                     <p className="font-serif text-base md:text-lg lg:text-xl mb-6 text-[#222] leading-relaxed">
-                        Django Day India is back, bringing together developers, enthusiasts, and contributors from across the country to learn, share, and grow. It's not just a conference—it's a community-driven space where ideas turn into collaborations and friendships.
+                        Django Day India is back, bringing together developers, enthusiasts, and contributors from across the country to learn, share, and grow. It&apos;s not just a conference—it&apos;s a community-driven space where ideas turn into collaborations and friendships.
                     </p>
                     <p className="font-serif text-base md:text-lg lg:text-xl mb-6 text-[#222] leading-relaxed">
-                        This event is made possible by our amazing sponsors and partners who support the Django community in India. Your sponsorship doesn't just power the event—it fuels the growth of the Django ecosystem and strengthens the network of developers who use it every day. As one of the largest Django gatherings in India, Django Day offers sponsors the chance to connect directly with passionate developers, rising talent, and potential collaborators. It's an opportunity to showcase your brand, engage with a diverse and skilled audience, and become part of the story of Django in India.
+                        This event is made possible by our amazing sponsors and partners who support the Django community in India. Your sponsorship doesn&apos;t just power the event—it fuels the growth of the Django ecosystem and strengthens the network of developers who use it every day. As one of the largest Django gatherings in India, Django Day offers sponsors the chance to connect directly with passionate developers, rising talent, and potential collaborators. It&apos;s an opportunity to showcase your brand, engage with a diverse and skilled audience, and become part of the story of Django in India.
                     </p>
                     <p className="font-serif text-base md:text-lg lg:text-xl mb-6 text-[#222] leading-relaxed">
                         Explore our sponsorship benefits and discover how you can make an impact on the Django community while gaining visibility, connections, and goodwill that extend far beyond the conference.
@@ -101,17 +104,21 @@ const SponsorsPage = () => {
                 <div className="bg-white relative overflow-visible flex flex-col justify-start items-center py-4 border-[5px] border-[#a31955] rounded-[25px] h-[80%] w-full sm:w-[80%] right-[-10%] sm:right-[-10%] md:right-[-7%] lg:right-[-7%]">
 
                     {/* Top Left Border Decor */}
-                    <img
+                    <Image
                         src="/images/border-decor.png"
                         alt="Border Decor"
+                        width={224}
+                        height={224}
                         className="absolute -top-20 -left-20 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 pointer-events-none select-none z-10"
                         style={{ objectFit: 'contain' }}
                     />
 
                     {/* Bottom Left Border Decor */}
-                    <img
+                    <Image
                         src="/images/palesi.png"
                         alt="Palesi Decor"
+                        width={144}
+                        height={144}
                         className="hidden lg:block absolute bottom-8 left-8 w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 pointer-events-none select-none z-10"
                         style={{ objectFit: 'contain' }}
                     />
@@ -127,9 +134,11 @@ const SponsorsPage = () => {
 
                             <ul className="space-y-[2%] md:space-y-[2.5%] lg:space-y-[3%] w-full max-w-[85%] md:max-w-3xl sm:w-[80%]">
                                 <li className="flex items-start gap-[1.5%] md:gap-[2%]">
-                                    <img
+                                    <Image
                                         src="/images/flower-bullets.png"
                                         alt="Bullet"
+                                        width={24}
+                                        height={24}
                                         className="w-[3vw] h-[3vw] sm:w-[2.5vw] sm:h-[2.5vw] md:w-5 md:h-5 lg:w-6 lg:h-6 mt-[0.3vw] md:mt-1 shrink-0"
                                     />
                                     <span className="font-serif text-base md:text-lg lg:text-xl text-[#222] leading-relaxed">
@@ -137,9 +146,11 @@ const SponsorsPage = () => {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-[1.5%] md:gap-[2%]">
-                                    <img
+                                    <Image
                                         src="/images/flower-bullets.png"
                                         alt="Bullet"
+                                        width={24}
+                                        height={24}
                                         className="w-[3vw] h-[3vw] sm:w-[2.5vw] sm:h-[2.5vw] md:w-5 md:h-5 lg:w-6 lg:h-6 mt-[0.3vw] md:mt-1 shrink-0"
                                     />
                                     <span className="font-serif text-base md:text-lg lg:text-xl text-[#222] leading-relaxed">
@@ -147,9 +158,11 @@ const SponsorsPage = () => {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-[1.5%] md:gap-[2%]">
-                                    <img
+                                    <Image
                                         src="/images/flower-bullets.png"
                                         alt="Bullet"
+                                        width={24}
+                                        height={24}
                                         className="w-[3vw] h-[3vw] sm:w-[2.5vw] sm:h-[2.5vw] md:w-5 md:h-5 lg:w-6 lg:h-6 mt-[0.3vw] md:mt-1 shrink-0"
                                     />
                                     <span className="font-serif text-base md:text-lg lg:text-xl text-[#222] leading-relaxed">
@@ -157,19 +170,23 @@ const SponsorsPage = () => {
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-[1.5%] md:gap-[2%]">
-                                    <img
+                                    <Image
                                         src="/images/flower-bullets.png"
                                         alt="Bullet"
+                                        width={24}
+                                        height={24}
                                         className="w-[3vw] h-[3vw] sm:w-[2.5vw] sm:h-[2.5vw] md:w-5 md:h-5 lg:w-6 lg:h-6 mt-[0.3vw] md:mt-1 shrink-0"
                                     />
                                     <span className="font-serif text-base md:text-lg lg:text-xl text-[#222] leading-relaxed">
-                                        <strong>Talent Access</strong> – Meet skilled developers and rising talent—an excellent opportunity if you're looking to hire or grow your tech team.
+                                        <strong>Talent Access</strong> – Meet skilled developers and rising talent—an excellent opportunity if you&apos;re looking to hire or grow your tech team.
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-[1.5%] md:gap-[2%]">
-                                    <img
+                                    <Image
                                         src="/images/flower-bullets.png"
                                         alt="Bullet"
+                                        width={24}
+                                        height={24}
                                         className="w-[3vw] h-[3vw] sm:w-[2.5vw] sm:h-[2.5vw] md:w-5 md:h-5 lg:w-6 lg:h-6 mt-[0.3vw] md:mt-1 shrink-0"
                                     />
                                     <span className="font-serif text-base md:text-lg lg:text-xl text-[#222] leading-relaxed">
