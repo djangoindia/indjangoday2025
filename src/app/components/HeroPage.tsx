@@ -8,6 +8,8 @@ import Navbar from './Navbar';
 import Button from './Button';
 import ScrollIndicator from './ScrollIndicator';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import KeynoteSpeakers from './KeyNote';
+import SponsorTiers from './Sponsors';
 import ContactSection from './Footers';
 
 
@@ -552,7 +554,7 @@ export default function HeroPage() {
             <div className="col-span-1 sm:col-span-2 lg:col-span-3">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fc38f2af8-2fb1-423b-86f8-9a43b10.jpeg&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/c38f2af8-2fb1-423b-86f8-9a43b10.jpeg"
                   alt="Django India Meetup 1"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -564,7 +566,7 @@ export default function HeroPage() {
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fbffc4f29-d7fb-42a7-9aee-9a209abcc6c5.JPG&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/bffc4f29-d7fb-42a7-9aee-9a209abcc6c5.JPG"
                   alt="Django India Meetup 2"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -572,7 +574,7 @@ export default function HeroPage() {
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-64 sm:h-80 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2FIMG-20250118-WA0035.jpg&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/IMG-20250118-WA0035.jpg"
                   alt="Django India Meetup 3"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -584,7 +586,7 @@ export default function HeroPage() {
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2F1U9A0141.jpeg&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/1U9A0141.jpeg"
                   alt="Django India Meetup 4"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -592,7 +594,7 @@ export default function HeroPage() {
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo_first.png&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/group_photo_first.png"
                   alt="Django India Meetup 5"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -600,7 +602,7 @@ export default function HeroPage() {
               </div>
               <div className="relative overflow-hidden rounded-xl shadow-lg h-48 sm:h-64 w-full">
                 <Image
-                  src="https://www.djangoindia.org/_next/image?url=https%3A%2F%2Fdjangoindia-prod-s3.s3.amazonaws.com%2Fmedia%2Fevent_images%2Fgroup_photo.png&w=1920&q=75"
+                  src="https://djangoindia-prod-s3.s3.amazonaws.com/media/event_images/group_photo.png"
                   alt="Django India Meetup 6"
                   fill
                   className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
