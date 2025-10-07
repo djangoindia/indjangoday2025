@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom font faces */
 @font-face {
   font-family: 'Thicccboi';
   src: url('/fonts/THICCCBOI-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('/fonts/THICCCBOI-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('/fonts/THICCCBOI-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,22 +32,78 @@
   src: url('/fonts/THICCCBOI-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('/fonts/THICCCBOI-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('/fonts/THICCCBOI-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  font-family: 'Thicccboi', ui-sans-serif, system-ui, sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .backdrop-blur-safari {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Fix for image alignment issues */
+  .border-image-fix {
+    line-height: 0;
+    font-size: 0;
+  }
+
+  .border-image-fix img {
+    display: block;
+  }
+
+  /* Ensure perfect section alignment */
+  .section-no-gap {
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 0;
+  }
+}

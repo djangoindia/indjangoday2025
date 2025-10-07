@@ -1,13 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo_Black } from "next/font/google";
 import "./globals.css";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Script from "next/script";
 
-const archivoSans = Archivo_Black({
-  variable: "--font-archivo-sans",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://djangoday.in"),
@@ -56,12 +51,17 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/fonts/THICCCBOI-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/THICCCBOI-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/THICCCBOI-Black.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <meta name="theme-color" content="#15803d" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-S2C4B49K2N"
           strategy="afterInteractive"
@@ -87,17 +87,19 @@ export default function RootLayout({
             `,
           }}
           />
-        </head>
-      <body className={`${archivoSans.className} bg-[#F2ECE4]`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-W4BTVSLF"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {children}
+      </head>
+      <body className="antialiased font-sans bg-white text-gray-900 overflow-x-hidden">
+        <ErrorBoundary>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-W4BTVSLF"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {children}
+        </ErrorBoundary>
       </body>
     </html>
   );
