@@ -3,6 +3,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Button from './Button';
@@ -95,35 +96,29 @@ export default function HeroPage() {
           </p>
 
           <div className="w-[800px] mt-2 sm:mt-2 md:mt-4 text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl flex flex-row justify-center gap-6">
-            <Button
-              size="md"
-              className="bg-white text-[#095148] font-medium text-sm py-2 px-5"
-              onClick={() => {
-                if (process.env.NEXT_PUBLIC_CFP_URL) {
-                  window.open(process.env.NEXT_PUBLIC_CFP_URL, '_blank', 'noopener,noreferrer');
-                }
-              }}
+            <Link
+              href={process.env.NEXT_PUBLIC_CFP_URL || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group shadow-lg hover:shadow-xl hover:scale-105 gap-2 bg-white text-[#095148] font-medium text-sm py-2 px-5 cursor-pointer"
             >
               <span>Call For Proposals</span>
               <span className="text-xl sm:text-2xl transition-transform duration-300 group-hover:translate-x-1">
                 <FaRegArrowAltCircleRight />
               </span>
-            </Button>
+            </Link>
 
-            <Button
-              size="md"
-              className="font-medium text-sm py-2 px-5"
-              onClick={() => {
-                if (process.env.NEXT_PUBLIC_TICKETS_URL) {
-                  window.open(process.env.NEXT_PUBLIC_TICKETS_URL, '_blank', 'noopener,noreferrer');
-                }
-              }}
+            <Link
+              href={process.env.NEXT_PUBLIC_TICKETS_URL || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group shadow-lg hover:shadow-xl hover:scale-105 gap-2 bg-[#095148] text-white font-medium text-sm py-2 px-5 cursor-pointer"
             >
               <span>Buy Tickets</span>
               <span className="text-xl sm:text-2xl transition-transform duration-300 group-hover:translate-x-1">
                 <FaRegArrowAltCircleRight />
               </span>
-            </Button>
+            </Link>
 
           </div>
         </div>
@@ -142,7 +137,7 @@ export default function HeroPage() {
         </div>
 
         {/* Bottom Border - Restored and properly aligned */}
-        <div className="absolute bottom-0 left-0 w-full z-10">
+        <div className="absolute bottom-0 left-0 w-full z-10" style={{ pointerEvents: 'none' }}>
           <div className={`w-full transition-all duration-1000 ease-out delay-600 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <Image
               src="/images/section-1-border.png"
