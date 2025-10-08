@@ -8,8 +8,6 @@ import Navbar from './Navbar';
 import Button from './Button';
 import ScrollIndicator from './ScrollIndicator';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import KeynoteSpeakers from './KeyNote';
-import SponsorTiers from './Sponsors';
 import ContactSection from './Footers';
 
 
