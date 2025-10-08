@@ -19,7 +19,7 @@ export default function Button({
   disabled,
   ...props 
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group";
+  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer group";
   
   const variantClasses = {
     primary: "bg-[#095148] text-white shadow-lg hover:shadow-xl hover:scale-105",
