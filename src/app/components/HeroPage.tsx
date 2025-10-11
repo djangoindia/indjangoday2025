@@ -10,6 +10,7 @@ import Button from './Button';
 import ScrollIndicator from './ScrollIndicator';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import ContactSection from './Footers';
+import KeynoteSpeakers from './KeyNote';
 
 
 export default function HeroPage() {
@@ -273,7 +274,7 @@ export default function HeroPage() {
         )}
       </section>
 
-      
+      <KeynoteSpeakers />
 
 
       {/* Section 4 - Event Sponsors */}

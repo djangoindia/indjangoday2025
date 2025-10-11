@@ -15,18 +15,18 @@ interface KeynoteSpeakersProps {
 const defaultSpeakers: Speaker[] = [
   {
     id: 1,
-    name: 'XYZ',
-    designation: 'Designation',
-    imageSrc: '/images/speaker1.jpg',
-    imageAlt: 'Speaker 1',
+    name: 'Sarah Abderemane',
+    designation: 'Vice President, Django Software Foundation & Software Engineer at Kraken Tech',
+    imageSrc: '/images/sarah-abd.jpeg',
+    imageAlt: 'Picture of Sarah Abderemane',
   },
-  {
-    id: 2,
-    name: 'ABC',
-    designation: 'Designation',
-    imageSrc: '/images/speaker2.jpg',
-    imageAlt: 'Speaker 2',
-  },
+  // {
+  //   id: 2,
+  //   name: 'ABC',
+  //   designation: 'Designation',
+  //   imageSrc: '/images/speaker2.jpg',
+  //   imageAlt: 'Speaker 2',
+  // },
 ];
 
 export default function KeynoteSpeakers({ speakers = defaultSpeakers }: KeynoteSpeakersProps) {
@@ -59,26 +59,38 @@ export default function KeynoteSpeakers({ speakers = defaultSpeakers }: KeynoteS
 
       {/* Section Title */}
       <h2 className="relative z-10 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white bg-[#1a7a78]/90 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg mb-10 sm:mb-14 tracking-wide text-center leading-snug">
-        KEY NOTE SPEAKERS
+        KEYNOTE SPEAKERS
       </h2>
 
       {/* Speakers Grid */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl w-full px-4 sm:px-8 md:px-12">
+      <div className="relative z-10 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl mx-auto w-full px-4 sm:px-6">
         {speakers.map((speaker) => (
           <div
             key={speaker.id}
-            className="relative bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-xl overflow-hidden shadow-lg"
+            className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-[calc(50%-0.75rem)]"
           >
-            <Image
-              src={speaker.imageSrc}
-              alt={speaker.imageAlt}
-              width={500}
-              height={600}
-              className="w-full h-64 sm:h-72 md:h-96 object-cover"
-            />
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white drop-shadow-md">
-              <h3 className="text-base sm:text-lg font-bold">{speaker.name}</h3>
-              <p className="text-xs sm:text-sm">{speaker.designation}</p>
+            {/* Image Container */}
+            <div className="relative aspect-[3/4] w-full overflow-hidden">
+              <Image
+                src={speaker.imageSrc}
+                alt={speaker.imageAlt}
+                width={500}
+                height={600}
+                className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+              />
+              
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            </div>
+            
+            {/* Text Content */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+              <h3 className="text-white text-base sm:text-lg font-bold mb-1 drop-shadow-lg">
+                {speaker.name}
+              </h3>
+              <p className="text-white/90 text-sm sm:text-base font-medium drop-shadow-md">
+                {speaker.designation}
+              </p>
             </div>
           </div>
         ))}
