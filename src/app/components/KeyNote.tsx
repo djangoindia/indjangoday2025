@@ -15,18 +15,18 @@ interface KeynoteSpeakersProps {
 const defaultSpeakers: Speaker[] = [
   {
     id: 1,
+    name: 'Thibaud Colas',
+    designation: 'President, Django Software Foundation & Tech Lead at Torchbox',
+    imageSrc: '/images/thibaud-heart-web.jpg',
+    imageAlt: 'Picture of Thibaud Colas',
+  },
+  {
+    id: 2,
     name: 'Sarah Abderemane',
     designation: 'Vice President, Django Software Foundation & Software Engineer at Kraken Tech',
     imageSrc: '/images/sarah-abd.jpeg',
     imageAlt: 'Picture of Sarah Abderemane',
   },
-  // {
-  //   id: 2,
-  //   name: 'ABC',
-  //   designation: 'Designation',
-  //   imageSrc: '/images/speaker2.jpg',
-  //   imageAlt: 'Speaker 2',
-  // },
 ];
 
 export default function KeynoteSpeakers({ speakers = defaultSpeakers }: KeynoteSpeakersProps) {
