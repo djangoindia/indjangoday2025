@@ -478,6 +478,34 @@ export default function HeroPage() {
                 className="object-contain max-h-24 sm:max-h-28"
               />
             </div>
+            <div className="rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-black" style={{ backgroundColor: 'rgba(255, 255, 255, 0.47)' }}>
+              <Image
+                src='/images/djangogirlsblr.png'
+                alt='BangPypers Community'
+                width={800}
+                height={800}
+                className="object-contain max-h-24 sm:max-h-28"
+              />
+            </div>
+            <div className="rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-black" style={{ backgroundColor: 'rgba(255, 255, 255, 0.47)' }}>
+              <Image
+                src='/images/hydpy.png'
+                alt='BangPypers Community'
+                width={800}
+                height={800}
+                className="object-contain max-h-24 sm:max-h-28"
+              />
+            </div>
+            <div className="rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-black" style={{ backgroundColor: 'rgba(255, 255, 255, 0.47)' }}>
+              <Image
+                src='/images/IDC_Logo (3) - Indian Data Club.png'
+                alt='BangPypers Community'
+                width={800}
+                height={800}
+                className="object-contain max-h-24 sm:max-h-28"
+              />
+            </div>
+
           </div>
         </div>
 
