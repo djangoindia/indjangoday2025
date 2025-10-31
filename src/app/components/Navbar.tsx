@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   // { label: 'Schedule', href: '/schedule' },
   // { label: 'Venue', href: '/venue' },
   { label: 'Sponsors', href: '/sponsors' },
-  // { label: 'CoC', href: '/coc' },
+  { label: 'CoC', href: '/coc' },
 ];
 
 
