@@ -22,21 +22,6 @@ interface SponsorTiersProps {
   backgroundColor?: string;
 }
 
-const defaultTiers: SponsorTier[] = [
-  {
-    name: 'PLATINUM',
-    bgColor: 'bg-[#e5e7eb]',
-    hoverColor: 'hover:bg-gray-200',
-    textColor: 'text-gray-800',
-  },
-  {
-    name: 'GRANT',
-    bgColor: 'bg-[#fbbf24]',
-    hoverColor: 'hover:bg-yellow-400',
-    textColor: 'text-gray-800',
-    isActive: true,
-  },
-];
 
 const defaultSponsors: Sponsor[] = [
   // Platinum Sponsors
@@ -61,18 +46,6 @@ export default function SponsorTiers({
   sponsors = defaultSponsors,
   backgroundColor = '#ed9a15',
 }: SponsorTiersProps) {
-  // Group sponsors into rows
-  const getRowSponsors = () => {
-    const rows = [];
-    // First 3 rows: 4 sponsors each
-    for (let i = 0; i < 3; i++) {
-      rows.push(sponsors.slice(i * 4, (i + 1) * 4));
-    }
-    // Last 2 rows: 3 sponsors each (centered)
-    rows.push(sponsors.slice(12, 15));
-    rows.push(sponsors.slice(15, 18));
-    return rows;
-  };
 
   return (
     <section
