@@ -58,7 +58,6 @@ const defaultSponsors: Sponsor[] = [
 ];
 
 export default function SponsorTiers({
-  tiers = defaultTiers,
   sponsors = defaultSponsors,
   backgroundColor = '#ed9a15',
 }: SponsorTiersProps) {
@@ -74,8 +73,6 @@ export default function SponsorTiers({
     rows.push(sponsors.slice(15, 18));
     return rows;
   };
-
-  const rowSponsors = getRowSponsors();
 
   return (
     <section
