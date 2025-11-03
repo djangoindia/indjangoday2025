@@ -11,6 +11,7 @@ import ScrollIndicator from './ScrollIndicator';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import ContactSection from './Footers';
 import KeynoteSpeakers from './KeyNote';
+import Sponsors from './Sponsors';
 
 
 export default function HeroPage() {
@@ -408,8 +409,9 @@ export default function HeroPage() {
         >
         </div>
       </section>
-      
 
+      <Sponsors/>
+      
       <section
       id="participating-communities-section"
       className="relative w-full min-h-screen overflow-hidden"

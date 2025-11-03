@@ -13,6 +13,7 @@ interface Sponsor {
   logoSrc?: string;
   logoAlt?: string;
   tier: string;
+  url?: string;
 }
 
 interface SponsorTiersProps {
@@ -29,30 +30,32 @@ const defaultTiers: SponsorTier[] = [
     textColor: 'text-gray-800',
   },
   {
-    name: 'GOLD',
+    name: 'GRANT',
     bgColor: 'bg-[#fbbf24]',
     hoverColor: 'hover:bg-yellow-400',
     textColor: 'text-gray-800',
     isActive: true,
   },
-  {
-    name: 'SILVER',
-    bgColor: 'bg-[#e5e7eb]',
-    hoverColor: 'hover:bg-gray-200',
-    textColor: 'text-gray-800',
-  },
-  {
-    name: 'ASSOCIATE',
-    bgColor: 'bg-[#d4a574]',
-    hoverColor: 'hover:bg-amber-600',
-    textColor: 'text-white',
-  },
 ];
 
-const defaultSponsors: Sponsor[] = Array.from({ length: 18 }, (_, i) => ({
-  id: i + 1,
-  tier: 'gold',
-}));
+const defaultSponsors: Sponsor[] = [
+  // Platinum Sponsors
+  {
+    id: 1,
+    logoSrc: "/images/sponsors/happyfox.png",
+    logoAlt: "HappyFox",
+    tier: 'platinum',
+    url: 'https://www.happyfox.com/'
+  },
+  // Grant Sponsors
+  {
+    id: 2,
+    logoSrc: "/images/sponsors/django.png",
+    logoAlt: "Django Software Foundation",
+    tier: 'grant',
+    url: 'https://www.djangoproject.com/foundation/'
+  },
+];
 
 export default function SponsorTiers({
   tiers = defaultTiers,
@@ -80,73 +83,139 @@ export default function SponsorTiers({
       className="relative w-full min-h-screen overflow-hidden"
       style={{ background: backgroundColor }}
     >
-      {/* Decorative Clouds */}
-      <div className="absolute top-8 right-16 w-24 md:w-32 lg:w-36 opacity-90 z-20">
+      {/* Decorative Clouds - Hidden on mobile to prevent overlap */}
+      <div className="hidden md:block absolute top-8 right-16 w-32 lg:w-36 opacity-90 z-20">
         <Image
           src="/images/cloud1.png"
           alt="Cloud"
           width={150}
           height={100}
           className="object-contain"
+          priority
         />
       </div>
-      <div className="absolute bottom-20 right-48 w-20 md:w-24 lg:w-28 opacity-80 z-20">
+      <div className="hidden md:block absolute bottom-20 right-48 w-24 lg:w-28 opacity-80 z-20">
         <Image
           src="/images/cloud2.png"
           alt="Cloud"
           width={120}
           height={80}
           className="object-contain"
+          priority
         />
       </div>
 
       {/* Main content container */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-24 left-[10%] -translate-x-1/2">
-        {/* Sponsor Tier Categories */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 max-w-2xl">
-          {tiers.map((tier, index) => (
-            <div
-              key={index}
-              className={`${tier.bgColor} ${tier.hoverColor} transition-colors duration-300 px-4 py-3 rounded-lg shadow-md border-2 border-[rgba(0,0,0,0.4)]`}
-            >
-              <span className={`${tier.textColor} font-bold text-sm text-center block`}>
-                {tier.name}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        {/* Section Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-left mb-12 text-white drop-shadow">
+          Our Sponsors
+        </h2>
+
+        {/* Platinum Sponsor */}
+        <div className="mb-16">
+          <div className="mb-6">
+            <div className="bg-[#e5e7eb] hover:bg-gray-200 transition-colors duration-300 px-6 py-3 rounded-lg shadow-md border-2 border-[rgba(0,0,0,0.4)] inline-block">
+              <span className="text-gray-800 font-bold text-lg">
+                PLATINUM
               </span>
             </div>
-          ))}
+          </div>
+          <div className="grid grid-cols-1 gap-8 max-w-2xl">
+            {sponsors.filter(s => s.tier === 'platinum').map((sponsor) => (
+              <div key={sponsor.id} className="w-full">
+                {sponsor.url ? (
+                  <a
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-8 shadow-lg min-h-[200px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                      {sponsor.logoSrc && (
+                        <div className="relative w-full h-40">
+                          <Image
+                            src={sponsor.logoSrc}
+                            alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                            fill
+                            className="object-contain p-4"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                ) : (
+                  <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-8 shadow-lg min-h-[200px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                    {sponsor.logoSrc && (
+                      <div className="relative w-full h-40">
+                        <Image
+                          src={sponsor.logoSrc}
+                          alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                          fill
+                          className="object-contain p-4"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Sponsor Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
-          {rowSponsors.map((row, rowIndex) => (
-            row.map((sponsor, colIndex) => {
-              const isLastTwoRows = rowIndex >= 3;
-              const gridColClass = isLastTwoRows && colIndex === 0 ? 'col-start-2' : '';
-
-              return (
-                <div
-                  key={sponsor.id}
-                  className={`${gridColClass} bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-4 shadow-lg min-h-[80px] flex items-center justify-center border-2 border-[rgba(0,0,0,0.4)]`}
-                >
-                  {sponsor.logoSrc ? (
-                    <Image
-                      src={sponsor.logoSrc}
-                      alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
-                      width={100}
-                      height={60}
-                      className="object-contain"
-                    />
-                  ) : (
-                    <div className="text-center">
-                      <div className="text-[#8b4513] font-semibold text-xs opacity-70">
-                        Logo {sponsor.id}
-                      </div>
+        {/* Grant Sponsor */}
+        <div>
+          <div className="mb-6">
+            <div className="bg-[#fbbf24] hover:bg-yellow-400 transition-colors duration-300 px-6 py-2 rounded-lg shadow-md border-2 border-[rgba(0,0,0,0.4)] inline-block">
+              <span className="text-gray-800 font-bold">
+                GRANT
+              </span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-8 max-w-xl">
+            {sponsors.filter(s => s.tier === 'grant').map((sponsor) => (
+              <div key={sponsor.id} className="w-2/3">
+                {sponsor.url ? (
+                  <a
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-4 shadow-lg min-h-[120px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                      {sponsor.logoSrc && (
+                        <div className="relative w-full h-24">
+                          <Image
+                            src={sponsor.logoSrc}
+                            alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                            fill
+                            className="object-contain p-3"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              );
-            })
-          ))}
+                  </a>
+                ) : (
+                  <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-4 shadow-lg min-h-[120px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                    {sponsor.logoSrc && (
+                      <div className="relative w-full h-24">
+                        <Image
+                          src={sponsor.logoSrc}
+                          alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                          fill
+                          className="object-contain p-3"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
