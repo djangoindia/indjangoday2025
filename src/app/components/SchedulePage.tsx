@@ -195,7 +195,7 @@ const SchedulePage = () => {
                                         </div>
 
                                         {/* center marker */}
-                                        <div className="relative flex justify-center items-center my-2 md:my-0">
+                                        <div className="relative hidden md:flex justify-center items-center my-2 md:my-0">
                                             <div className="z-10 w-9 h-9 -mt-1">
                                                 <Image src="/images/flower-bullets.png" alt="marker" width={36} height={36} className="w-9 h-9" />
                                             </div>
