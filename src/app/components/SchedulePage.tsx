@@ -2,11 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
+import ContactSection from './Footers';
 
 const SchedulePage = () => {
     // Structured schedule JSON
     const scheduleData = [
-        { start: '08:00', end: '09:00', type: 'networking', title: 'Registration & Networking' },
+        { start: '08:00', end: '09:00', type: 'Networking', title: 'Registration & Networking' },
         { start: '09:10', end: '09:20', type: 'address', title: 'Opening Address' },
         { start: '09:30', end: '10:15', type: 'keynote', title: 'Opening Keynote', speaker: 'TBD' },
         { start: '10:20', end: '10:50', type: 'talk', title: 'Talk Title TBD', speaker: 'TBD' },
@@ -128,20 +129,20 @@ const SchedulePage = () => {
                     />
                 </div>
 
-                {/* Timeline header */}
-                <div className="w-full px-4 md:px-10 lg:px-24">
-                    <div className="mx-auto max-w-5xl mb-4 md:mb-6 text-center">
-                        <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#092E20] text-white text-sm md:text-base font-semibold shadow-sm">
-                            <span>Conference Day Timeline</span>
-                        </div>
-                    </div>
-                </div>
+                {/* Timeline header moved inside the timeline container below for connection */}
 
                 {/* Unique Vertical Timeline */}
                 <div className="w-full px-4 md:px-10 lg:px-24">
                     <div className="relative mx-auto max-w-5xl py-10 md:py-16">
-                        {/* central vertical line */}
-                        <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-[#092E20]/25" />
+                        {/* Timeline header inside container so the line can connect to it */}
+                        <div className="mb-8 md:mb-10 text-center">
+                            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#092E20] text-white text-sm md:text-base font-semibold shadow-sm">
+                                <span>Conference Day Timeline</span>
+                            </div>
+                        </div>
+
+                        {/* central vertical line spanning between header and footer note */}
+                        <div className="absolute left-1/2 -translate-x-1/2 w-[2px] bg-[#092E20]/25 top-16 md:top-20 bottom-24 md:bottom-28" />
 
                         <ul className="space-y-10 md:space-y-16">
                             {scheduleRows.map((row, idx) => {
@@ -224,9 +225,17 @@ const SchedulePage = () => {
                                 );
                             })}
                         </ul>
+
+                        {/* Timeline footer note */}
+                        <div className="mt-8 md:mt-12 text-center">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-[#092E20]/15 shadow-sm">
+                                <span className="text-[#092E20] font-medium">Hope you have a good time.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <ContactSection primaryColor="#ffd476" />
         </div>
     );
 };

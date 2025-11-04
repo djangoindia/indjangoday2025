@@ -13,7 +13,7 @@ interface SocialLink {
   icon: React.ReactNode;
 }
 
-const ContactSection: React.FC = () => {
+const ContactSection: React.FC<{ primaryColor?: string }> = ({ primaryColor = '#ffffff' }) => {
   const socialLinks: SocialLink[] = [
     {
       href: "https://www.twitter.com/djangoindiaa",
@@ -56,7 +56,8 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact-section"
-      className="relative w-full min-h-screen bg-white overflow-hidden flex flex-col justify-end"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col justify-end"
+      style={{ backgroundColor: primaryColor }}
     >
       {/* Bottom section - Responsive layout with elephant overflow */}
       <div 
