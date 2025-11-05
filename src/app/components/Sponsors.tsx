@@ -32,9 +32,16 @@ const defaultSponsors: Sponsor[] = [
     tier: 'platinum',
     url: 'https://www.happyfox.com/'
   },
-  // Grant Sponsors
   {
     id: 2,
+    logoSrc: "/images/sponsors/scaler.webp",
+    logoAlt: "Scaler School of Technology",
+    tier: 'venue',
+    url: 'https://www.scaler.com/'
+  },
+  // Grant Sponsors
+  {
+    id: 3,
     logoSrc: "/images/sponsors/django.png",
     logoAlt: "Django Software Foundation",
     tier: 'grant',
@@ -119,6 +126,59 @@ export default function SponsorTiers({
                   <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-8 shadow-lg min-h-[200px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
                     {sponsor.logoSrc && (
                       <div className="relative w-full h-40">
+                        <Image
+                          src={sponsor.logoSrc}
+                          alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                          fill
+                          className="object-contain p-4"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Venue Sponsor */}
+        <div className="mb-16">
+          <div className="mb-6">
+            <div className="bg-[#fbbf24] hover:bg-yellow-400 transition-colors duration-300 px-6 py-2 rounded-lg shadow-md border-2 border-[rgba(0,0,0,0.4)] inline-block">
+              <span className="text-gray-800 font-bold">
+                Venue Sponsor
+              </span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-8 max-w-2xl">
+            {sponsors.filter(s => s.tier === 'venue').map((sponsor) => (
+              <div key={sponsor.id} className="w-3/4">
+                {sponsor.url ? (
+                  <a
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-6 shadow-lg min-h-[160px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                      {sponsor.logoSrc && (
+                        <div className="relative w-full h-32">
+                          <Image
+                            src={sponsor.logoSrc}
+                            alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
+                            fill
+                            className="object-contain p-4"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                ) : (
+                  <div className="bg-[#f4c2a1] hover:bg-[#f0b894] transition-colors duration-300 rounded-lg p-6 shadow-lg min-h-[160px] flex items-center border-2 border-[rgba(0,0,0,0.4)]">
+                    {sponsor.logoSrc && (
+                      <div className="relative w-full h-32">
                         <Image
                           src={sponsor.logoSrc}
                           alt={sponsor.logoAlt || `Sponsor ${sponsor.id}`}
