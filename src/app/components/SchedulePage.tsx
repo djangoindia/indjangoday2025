@@ -7,7 +7,7 @@ import ContactSection from './Footers';
 const SchedulePage = () => {
     // Structured schedule JSON
     const scheduleData = [
-        { start: '08:00', end: '09:00', type: 'Networking', title: 'Registration & Networking' },
+        { start: '08:00', end: '09:00', type: 'Networking', title: 'Registration, Networking & Tea' },
         { start: '09:10', end: '09:20', type: 'address', title: 'Opening Address' },
         { start: '09:30', end: '10:15', type: 'keynote', title: 'Building Temples: My Journey from Dreamer to Builder', speaker: 'Sarah Abderemane' },
         { start: '10:30', end: '11:00', type: 'talk', title: 'Stop N+1s: Practical Django ORM Query Optimisation (with Before/After Wins)', speaker: 'Mahesh Varma & Dheeraj' },
