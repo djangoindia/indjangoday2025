@@ -256,10 +256,10 @@ export default function HeroPage() {
             </p>
 
             <div className='flex flex-row align-left w-full'>
-              <Button className="mt-2 sm:mt-4">
+              <Link href="/schedule" className="mt-2 sm:mt-4 inline-flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group shadow-lg hover:shadow-xl hover:scale-105 gap-2 bg-[#095148] text-white font-medium text-sm py-2 px-5 cursor-pointer">
                 <span>View Schedule</span>
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1"><FaRegArrowAltCircleRight /></span>
-              </Button>
+              </Link>
             </div>
           </div>
 
