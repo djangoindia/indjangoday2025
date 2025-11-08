@@ -64,6 +64,19 @@ const teamCategories = [
                     website: cleanUrl('https://kdpisda.in', false, true),
                 },
             },
+            {
+                name: 'Yash Raj',
+                role: '',
+                id: 'program-committee-3',
+                image: getImagePath('Yash Raj'),
+                links: {
+                    discord: '',
+                    linkedin: cleanUrl('https://www.linkedin.com/in/yash-raj-83933922a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', true),
+                    twitter: cleanUrl('https://x.com/Yash44207966?t=w-NZlDHJ9qgvTVODAt1hBQ&s=09'),
+                    youtube: '',
+                    website: '',
+                },
+            },
         ],
     },
     {
@@ -185,9 +198,22 @@ const teamCategories = [
                 id: 'logistics-0',
                 image: getImagePath('Tiyasha Banerjee'),
                 links: {
-                    discord: 'tiyashabanerjee064704',
+                    discord: '',
                     linkedin: cleanUrl('https://www.linkedin.com/in/tiyasha-banerjee-06?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', true),
                     twitter: cleanUrl('https://x.com/TiyashaB06?t=C9SmranBr5QrZTduhjUSMw&s=09'),
+                    youtube: '',
+                    website: '',
+                },
+            },
+            {
+                name: 'Daksh Jain',
+                role: '',
+                id: 'logistics-1',
+                image: getImagePath('Daksh Jain', 'png'),
+                links: {
+                    discord: '',
+                    linkedin: cleanUrl('https://linkedin.com/in/daksh777', true),
+                    twitter: cleanUrl('https://x.com/0xDPJ'),
                     youtube: '',
                     website: '',
                 },
