@@ -41,7 +41,7 @@ const teamCategories = [
             {
                 name: 'Bhuvnesh Sharma',
                 role: '',
-                id: 'sponsorship-0',
+                id: 'organizer-1',
                 image: getImagePath('Bhuvnesh Sharma', 'jpeg'),
                 links: {
                     discord: '',
@@ -54,7 +54,7 @@ const teamCategories = [
             {
                 name: 'Kuldeep Pisda',
                 role: '',
-                id: 'program-committee-1',
+                id: 'organizer-2',
                 image: getImagePath('Kuldeep Pisda'),
                 links: {
                     discord: '',
@@ -98,7 +98,7 @@ const teamCategories = [
             {
                 name: 'Yash Raj',
                 role: '',
-                id: 'program-committee-3',
+                id: 'program-committee-2',
                 image: getImagePath('Yash Raj'),
                 links: {
                     discord: '',
@@ -129,7 +129,7 @@ const teamCategories = [
             {
                 name: 'Kuldeep Pisda',
                 role: '',
-                id: 'program-committee-1',
+                id: 'sponsorship-1',
                 image: getImagePath('Kuldeep Pisda'),
                 links: {
                     discord: '',
